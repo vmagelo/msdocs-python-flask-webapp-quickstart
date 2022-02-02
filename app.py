@@ -26,7 +26,7 @@ def hello():
 
 @app.route('/list', methods=['POST'])
 def list():
-   storage_url = 'https://msdocspythonflaskvmagelo.blob.core.windows.net'
+   storage_url = 'https://vmagelopythonflask.blob.core.windows.net/'
    container_name = 'blob-container-01'
    credential = DefaultAzureCredential(exclude_shared_token_cache_credential=True)
    container_client = ContainerClient(account_url=storage_url, container_name=container_name, credential=credential)
