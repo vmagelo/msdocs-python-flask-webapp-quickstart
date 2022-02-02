@@ -1,6 +1,7 @@
 import os
 from azure.identity import DefaultAzureCredential
 from azure.identity import VisualStudioCodeCredential
+from azure.identity import InteractiveBrowserCredential
 from azure.mgmt.resource import SubscriptionClient
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient, __version__
 
@@ -37,6 +38,7 @@ try:
         bloblist += blob.name + ' '
 
 except Exception as ex:
+    print(ex)
     bloblist = 'error'
 
 print(bloblist)
